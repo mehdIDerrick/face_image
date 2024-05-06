@@ -4,6 +4,7 @@ import shutil
 import face_recognition
 import os
 import uvicorn
+import tempfile
 app = FastAPI()
 @app.post("/compare_faces/")
 async def compare_faces(known_image: UploadFile = File(...), unknown_image: UploadFile = File(...)):
