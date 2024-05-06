@@ -1,0 +1,17 @@
+# API de Comparaison de Visages
+
+Cette API permet de comparer deux images pour déterminer si les visages qu'elles contiennent correspondent.
+
+## Installation
+
+1. Assurez-vous d'avoir Python installé sur votre système.
+2. Installez les dépendances en exécutant `pip install -r requirements.txt`.
+
+## Utilisation
+
+1. Exécutez le serveur en exécutant `uvicorn main:app --reload`.
+2. Envoyez une requête POST à l'URL `http://127.0.0.1:8000/compare_faces/` avec les deux images à comparer jointes.
+
+Exemple de requête avec cURL :
+
+curl -X POST "http://127.0.0.1:8000/compare_faces/" -H "Content-Type: multipart/form-data" -F "known_image=@biden.jpg" -F "unknown_image=@unknown.jpg"

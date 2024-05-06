@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+shutil
+face_recognition
+tempfile
+os
